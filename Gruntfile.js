@@ -31,9 +31,10 @@ module.exports = function(grunt) {
 
     less: {
       caminho: {
-          options : {yuicompress: true},
+          //options : {yuicompress: true},
           src: [
                   'wp-content/themes/odebrecht/teste.less',
+                  'wp-content/themes/odebrecht/style-600.less',
                   'wp-content/themes/odebrecht/novo.less'
                 ],
           dest: 'wp-content/themes/odebrecht/styleall.css'
