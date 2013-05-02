@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       styleIpad: {
           //options : {yuicompress: true},
           src:  'wp-content/themes/fozoa/css/less/style-768.less', 
-          dest: 'wp-content/themes/fozoa/css/less/style-768.css'
+          dest: 'wp-content/themes/fozoa/css/style-768.css'
       }, 
       style980: {
           //options : {yuicompress: true},
