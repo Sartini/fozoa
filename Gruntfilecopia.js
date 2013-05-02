@@ -4,14 +4,7 @@ module.exports = function(grunt) {
   utils = (require('./gruntcomponents/misc/commonutils'))(grunt);
   grunt.task.loadTasks('gruntcomponents/tasks');
   grunt.task.loadNpmTasks('grunt-contrib-watch');
-  grunt.task.loadNpmTasks('grunt-contrib-less');
   grunt.initConfig({
-    distdir: 'wp-content/themes/odebrecht',
-    pkg: grunt.file.readJSON('package.json'),
-    src: {
-      less: ['wp-content/themes/odebrecht/*.less'],
-    },
-
     growl: {
       ok: {
         title: 'COMPLETE!!',
@@ -28,18 +21,6 @@ module.exports = function(grunt) {
         dest: 'js/'
       } 
     },
-
-    less: {
-      caminho: {
-          options : {yuicompress: true},
-          src: [
-                  'wp-content/themes/odebrecht/teste.less',
-                  'wp-content/themes/odebrecht/novo.less'
-                ],
-          dest: 'wp-content/themes/odebrecht/styleall.css'
-      }
-       
-    },
     watch: {
       dist2: {
         files: 'wp-content/themes/bb/js/*.coffee',
@@ -48,10 +29,6 @@ module.exports = function(grunt) {
       dist3: {
         files: 'js/*.coffee',
         tasks: ['coffee:dist3', 'growl:ok']
-      }, 
-      less: {
-        files: ['wp-content/themes/odebrecht/*.less'],
-        tasks: 'less'
       } 
     }
   });
@@ -59,5 +36,5 @@ module.exports = function(grunt) {
     console.log('teste');
     return utils.growl('ERROR!!', msg);
   });
-  return grunt.registerTask('default', ['coffee', 'less', 'growl:ok']);
+  return grunt.registerTask('default', ['coffee', 'growl:ok']);
 };
