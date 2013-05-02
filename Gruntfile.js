@@ -6,10 +6,10 @@ module.exports = function(grunt) {
   grunt.task.loadNpmTasks('grunt-contrib-watch');
   grunt.task.loadNpmTasks('grunt-contrib-less');
   grunt.initConfig({
-    distdir: 'wp-content/themes/odebrecht',
+    distdir: 'wp-content/themes/fozoa',
     pkg: grunt.file.readJSON('package.json'),
     src: {
-      less: ['wp-content/themes/odebrecht/*.less'],
+      less: ['wp-content/themes/fozoa/*.less'],
     },
 
     growl: {
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
     },
     coffee: {
       dist2: {
-        dir: 'wp-content/themes/bb/js',
-        dest: 'wp-content/themes/bb/js'
+        dir: 'wp-content/themes/fozoa/js',
+        dest: 'wp-content/themes/fozoa/js'
       }, 
       dist3: {
         dir: 'js/',
@@ -31,19 +31,28 @@ module.exports = function(grunt) {
 
     less: {
       caminho: {
-          //options : {yuicompress: true},
+          options : {yuicompress: true},
           src: [
-                  'wp-content/themes/odebrecht/teste.less',
-                  'wp-content/themes/odebrecht/style-600.less',
-                  'wp-content/themes/odebrecht/novo.less'
+                  'wp-content/themes/fozoa/css/less/style-default.less',
+                  'wp-content/themes/fozoa/css/less/style-pages.less'
                 ],
-          dest: 'wp-content/themes/odebrecht/styleall.css'
+          dest: 'wp-content/themes/fozoa/css/styleall.css'
+      }, 
+      styleIpad: {
+          //options : {yuicompress: true},
+          src:  'wp-content/themes/fozoa/css/less/style-768.less', 
+          dest: 'wp-content/themes/fozoa/css/less/style-768.css'
+      }, 
+      style980: {
+          //options : {yuicompress: true},
+          src:  'wp-content/themes/fozoa/css/less/style-980.less', 
+          dest: 'wp-content/themes/fozoa/css/style-980.css'
       }
        
     },
     watch: {
       dist2: {
-        files: 'wp-content/themes/bb/js/*.coffee',
+        files: 'wp-content/themes/fozoa/js/*.coffee',
         tasks: ['coffee:dist2', 'growl:ok']
       },  
       dist3: {
@@ -51,7 +60,7 @@ module.exports = function(grunt) {
         tasks: ['coffee:dist3', 'growl:ok']
       }, 
       less: {
-        files: ['wp-content/themes/odebrecht/*.less'],
+        files: ['wp-content/themes/fozoa/css/less/*.less'],
         tasks: 'less'
       } 
     }

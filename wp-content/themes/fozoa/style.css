@@ -14,20 +14,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 
 
-@import url(css/style-default.css);
-@import url(css/style-pages.css);
+@import url(css/styleall.css);
 
-@import url(css/style-768.css) (min-width: 768px);
-@media only screen and (min-width: 768px) {
+@import url(css/style-768.css);
 
-}
+@import url(css/style-980.css);
 
-
-@import url(css/style-980.css) (min-width: 980px);
-
-@media only screen and (min-width: 980px) {
-	.tablet {
-		float: right;
-	}
-	
-}
+ 
