@@ -37,9 +37,17 @@ Template Name: Quem Somos
 								<!-- conteúdo da pagina -->
 								<div class="titulo">
 									<h1><?php the_title(); ?></h1>
+									<?php $codigo_da_galeria = get_post_meta($post->ID, 'codigo_da_galeria', true); ?>  
 								</div>
-								<div class="pagecontent">
-									 <?php //the_content(); ?>
+								<div class="galeria">
+									<?php if ( $codigo_da_galeria > 0) : ?>
+										<?php do_action('slideshow_deploy', $codigo_da_galeria); ?> 
+									<?php endif; ?>
+								</div>
+								<div class="pagecontenta">
+									<p>
+									 <?php the_content(); ?>
+									</p>
 								</div>
 
 							</div>	

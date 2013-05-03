@@ -374,7 +374,10 @@ function add_class_attachment_link($html){
 }
 add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
 
-// Add lead class to first paragraph
+
+//Retirei a linha abaixo
+//marcio
+//Add lead class to first paragraph
 function first_paragraph($content){
     global $post;
 
@@ -384,7 +387,9 @@ function first_paragraph($content){
     else
         return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
 }
-add_filter('the_content', 'first_paragraph');
+//essa funcao reescreve o primeiro paragrafo com a class lead, retirei pois nao será necessario reescrever
+//primeiro paragrafo
+//add_filter('the_content', 'first_paragraph');
 
 // Menu output mods
 class description_walker extends Walker_Nav_Menu
