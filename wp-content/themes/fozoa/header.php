@@ -135,7 +135,7 @@
 				 
  
 					 <div class="navbar brand"  >
-					 	<div class="navbar-inner logohome" >
+					 	<div class="container-fluid nav-container logohome" >
 					 			<div class="nav-container">
 					 					<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 					 					<div class="nav-collapse- right">

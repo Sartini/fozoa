@@ -5,7 +5,7 @@ Template Name: Homepage
 ?>
 
 <?php get_header(); ?>
-
+ 
 
 			
 			<div id="content" class="clearfix row-fluid">
@@ -28,10 +28,12 @@ Template Name: Homepage
 							global $post;
 							$tmp_post = $post;
 							$show_posts = of_get_option('slider_options');
+							 
 							$args = array( 'numberposts' => $show_posts ); // set this to how many posts you want in the carousel
 							$myposts = get_posts( $args );
 							$post_num = 0;
 							foreach( $myposts as $post ) :	setup_postdata($post);
+
 								$post_num++;
 								$post_thumbnail_id = get_post_thumbnail_id();
 								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-carousel' );

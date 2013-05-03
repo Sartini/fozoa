@@ -1,0 +1,14 @@
+/wp-content/themes/fozoa/cache/*
+/wp-content/blogs.dir/*
+/nbproject/private/private.xml
+/nbproject/project.properties
+/wp-content/themes/fozoa/functions.php
+
+./wp-config.php
+/wp-config.php
+wp-config.php
+.buildpath
+.project
+.htaccess
+.settings/
+httpd.conf

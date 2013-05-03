@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Quem Somos
+*/
+?>
 <?php get_header(); ?>
 	 
 			<div id="content" class="clearfix row-fluid">

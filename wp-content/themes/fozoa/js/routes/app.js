@@ -13,7 +13,7 @@ window.AppRouter = Backbone.Router.extend({
 
 
         //when your application starts up
-        Backbone.history.start({ pushState: Modernizr.history, silent: true, root: '/fozodebrecht/' });
+        Backbone.history.start({ pushState: Modernizr.history, silent: true, root: '/fozoa/' });
         
         if(!Modernizr.history) {
             var rootLength = Backbone.history.options.root.length;
@@ -21,9 +21,16 @@ window.AppRouter = Backbone.Router.extend({
             Backbone.history.loadUrl(fragment, { trigger: true });
             app_view.pageIdToBody(fragment.replace('/', ''));
         } else {
-            Backbone.history.loadUrl(Backbone.history.getFragment())
+            
+            url = Backbone.history.getFragment();
+            url = url.replace(/\//g, " ");
+           
+            //Backbone.history.loadUrl(Backbone.history.getFragment())
             //Linha abaixo pega o slug da pagina, o que vem depois da url --Backbone.history.fragment.replace('/', '')
-            app_view.pageIdToBody(Backbone.history.fragment.replace('/', ''));
+
+            //adiciona a url como classe do 
+
+            app_view.pageIdToBody(url);
         }
 
         this.setActiveMenu();

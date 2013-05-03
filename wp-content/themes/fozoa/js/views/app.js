@@ -55,9 +55,13 @@ window.AppView = Backbone.View.extend({
 		$('.tabs').tabs();
 	},
 	pageIdToBody: function(slug){
-		slug = this.cleanSlugs(slug);
-		slug = (slug=='')?'homePage':slug
-		$('body').attr('id', slug)
+		//Rotina antiga desativada
+		//slug = this.cleanSlugs(slug);
+		//slug = (slug=='')?'homePage':slug
+		//$('body').attr('id', slug)
+		///////ROTINA NOVA ////  ex: quem-somos/missao  , irá passar quem-somos missao , como classe do BODY
+		//adiciona a url como classe do BODY
+		$('body').addClass(slug);
 	},
 	activateMenu: function(fragment){
 		if(fragment)

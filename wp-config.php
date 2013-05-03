@@ -17,18 +17,18 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 // define('DB_NAME', 'bancodobrasil');
-define('DB_NAME', 'wpodebrecht');
+define('DB_NAME', 'fozoa');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'phpuser');
 // define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'php123');
 // define('DB_PASSWORD', '12345');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '192.168.16.3');
 // define('DB_HOST', 'workspace');
 
 /** Database Charset to use in creating database tables. */
@@ -84,8 +84,8 @@ define('WPLANG', 'pt_BR');
  */
 define('WP_DEBUG', false);
 
-define('WP_HOME','http://localhost/fozodebrecht');
-define('WP_SITEURL','http://localhost/fozodebrecht');   
+define('WP_HOME','http://localhost/fozoa');
+define('WP_SITEURL','http://localhost/fozoa');   
 
 /* That's all, stop editing! Happy blogging. */
 
