@@ -47,6 +47,10 @@ module.exports = function(grunt) {
           //options : {yuicompress: true},
           src:  'wp-content/themes/fozoa/css/less/style-980.less', 
           dest: 'wp-content/themes/fozoa/css/style-980.css'
+      }, 
+      bootstrap: {
+          src:  'wp-content/themes/fozoa/library/less/bootstrap.less', 
+          dest: 'wp-content/themes/fozoa/library/css/bootstrap.css'
       }
        
     },
@@ -60,7 +64,7 @@ module.exports = function(grunt) {
         tasks: ['coffee:dist3', 'growl:ok']
       }, 
       less: {
-        files: ['wp-content/themes/fozoa/css/less/*.less'],
+        files: ['wp-content/themes/fozoa/css/less/*.less', 'wp-content/themes/fozoa/library/less/*.less' ],
         tasks: 'less'
       } 
     }

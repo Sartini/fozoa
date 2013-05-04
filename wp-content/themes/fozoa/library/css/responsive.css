@@ -895,7 +895,7 @@
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
     font-weight: bold;
-    color: #777777;
+    color: rgb(240, 6, 6);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

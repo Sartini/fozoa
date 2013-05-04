@@ -121,35 +121,39 @@
 							
 						</div>
 					</div>
+
+
+			 		 	
 				</div>
 
-
-
+				<!-- AREA DE LOGO E PESQUISA NO HEADER -->
+							<div class="container-fluid nav-container logohome" >
+						 			<div class="nav-container">
+						 					<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+						 					<div class="nav-collapse- right">
+													<?php if(!of_get_option('search_bar', '1')) {?>
+														<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+															<input name="s" id="s" type="text" class="search-query" autocomplete="on" placeholder="<?php _e('Search','bonestheme'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
+														</form>
+													<?php } ?>
+											</div>
+					 				</div>
+				 			</div>
+ 
+					
 			
-
+ 
 		
 			
 			</div> <!-- end #inner-header -->
 
-						<!-- AREA DE LOGO E PESQUISA NO HEADER -->
-				 
+
+
  
-					 <div class="navbar brand"  >
-					 	<div class="container-fluid nav-container logohome" >
-					 			<div class="nav-container">
-					 					<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-					 					<div class="nav-collapse- right">
-										<?php if(!of_get_option('search_bar', '1')) {?>
-											<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-												<input name="s" id="s" type="text" class="search-query" autocomplete="on" placeholder="<?php _e('Search','bonestheme'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-											</form>
-										<?php } ?>
-								</div>
-								
-				 				</div>
-			 			</div>
-			 		</div>	
+				
 		
 		</header> <!-- end header -->
+
+
 		
 		<div class="container-fluid">
