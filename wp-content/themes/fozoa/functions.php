@@ -473,7 +473,7 @@ function theme_styles()
 { 
     // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
     wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
-    wp_register_style( 'bootstrap-responsive', get_template_directory_uri() . '/library/css/responsive.css', array(), '1.0', 'all' );
+    //wp_register_style( 'bootstrap-responsive', get_template_directory_uri() . '/library/css/responsive.css', array(), '1.0', 'all' );
     wp_register_style( 'wp-bootstrap', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
     
     wp_enqueue_style( 'bootstrap' );
@@ -488,7 +488,8 @@ function theme_js(){
   // wp_register_script('less', get_template_directory_uri().'/library/js/less-1.3.0.min.js');
 
   wp_deregister_script('jquery'); // initiate the function  
- // wp_register_script('jquery', get_template_directory_uri().'/library/js/libs/jquery-1.7.1.min.js', false, '1.7.1');
+  //desabilitei o responsivo::marcio
+  wp_register_script('jquery', get_template_directory_uri().'/library/js/libs/jquery-1.7.1.min.js', false, '1.7.1');
   wp_register_script('jquery', get_template_directory_uri().'/js/vendors/jquery.js', false, '1.7.1');
 
   wp_register_script('underscorejs', get_template_directory_uri().'/js/vendors/underscore.js');

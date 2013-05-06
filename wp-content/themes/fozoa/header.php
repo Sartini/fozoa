@@ -39,10 +39,10 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
-  		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-  		<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.less">
-  		<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/responsive.less">
+			<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.less">
+			<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/responsive.less">
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -102,9 +102,9 @@
 								 <a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> 
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
 								</a>
 								
 								<div class="nav-collapse  right tablet">
@@ -123,22 +123,30 @@
 					</div>
 
 
-			 		 	
+						
 				</div>
 
 				<!-- AREA DE LOGO E PESQUISA NO HEADER -->
-							<div class="container-fluid nav-container logohome" >
-						 			<div class="nav-container">
-						 					<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-						 					<div class="nav-collapse- right">
+						<div class="logohome">
+							<div class="container-fluid nav-container " >
+									<div class="nav-container">
+											<div class="logo">
+												<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
+													<img src="<?php echo get_template_directory_uri(); ?>/images/logo.jpg" alt="">
+												</a>
+											</div>
+												
+											<div class="nav-collapse- right">
 													<?php if(!of_get_option('search_bar', '1')) {?>
 														<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 															<input name="s" id="s" type="text" class="search-query" autocomplete="on" placeholder="<?php _e('Search','bonestheme'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 														</form>
 													<?php } ?>
 											</div>
-					 				</div>
-				 			</div>
+									</div>
+							</div>
+						</div>
+							
  
 					
 			
