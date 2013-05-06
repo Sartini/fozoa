@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         msg: '＼(^o^)／'
       }
     },
+
     coffee: {
       dist2: {
         dir: 'wp-content/themes/fozoa/js',
@@ -31,26 +32,26 @@ module.exports = function(grunt) {
 
     less: {
       caminho: {
-          options : {yuicompress: true},
-          src: [
-                  'wp-content/themes/fozoa/css/less/style-default.less',
-                  'wp-content/themes/fozoa/css/less/style-pages.less'
-                ],
-          dest: 'wp-content/themes/fozoa/css/styleall.css'
+        options : {yuicompress: true},
+        src: [
+          'wp-content/themes/fozoa/css/less/style-default.less',
+          'wp-content/themes/fozoa/css/less/style-pages.less'
+        ],
+        dest: 'wp-content/themes/fozoa/css/styleall.css'
       }, 
       styleIpad: {
-          //options : {yuicompress: true},
-          src:  'wp-content/themes/fozoa/css/less/style-768.less', 
-          dest: 'wp-content/themes/fozoa/css/style-768.css'
+        //options : {yuicompress: true},
+        src:  'wp-content/themes/fozoa/css/less/style-768.less', 
+        dest: 'wp-content/themes/fozoa/css/style-768.css'
       }, 
       style980: {
-          //options : {yuicompress: true},
-          src:  'wp-content/themes/fozoa/css/less/style-980.less', 
-          dest: 'wp-content/themes/fozoa/css/style-980.css'
+        //options : {yuicompress: true},
+        src:  'wp-content/themes/fozoa/css/less/style-980.less', 
+        dest: 'wp-content/themes/fozoa/css/style-980.css'
       }, 
       bootstrap: {
-          src:  'wp-content/themes/fozoa/library/less/bootstrap.less', 
-          dest: 'wp-content/themes/fozoa/library/css/bootstrap.css'
+        src:  'wp-content/themes/fozoa/library/less/bootstrap.less', 
+        dest: 'wp-content/themes/fozoa/library/css/bootstrap.css'
       }
        
     },
@@ -70,7 +71,6 @@ module.exports = function(grunt) {
     }
   });
   grunt.event.on('coffee.error', function(msg) {
-    console.log('teste');
     return utils.growl('ERROR!!', msg);
   });
   return grunt.registerTask('default', ['coffee', 'less', 'growl:ok']);
